@@ -35,6 +35,13 @@
               <li><%= link_to "Products", products_path %></li>
 
             </ul>
+          <div class="formstyle">
+            <%= form_tag("/products", method: "get", html: {:class => "formstyle"}) do %>
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search") %>
+            <% end %>
+          </div>
           </div><!--/.nav-collapse -->
         </div><!-- end nav container --> 
         </nav><!-- end nav  -->
