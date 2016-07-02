@@ -1,3 +1,4 @@
+<div class="fstyle">
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -10,7 +11,7 @@
       </ul>
     </div>
   <% end %>
-
+  <div id="fcenter"
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -23,9 +24,7 @@
     <%= f.label :image_url %><br>
     <%= f.text_field :image_url %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
   <div class="field">
   <%= f.label :color %><br>
   <%= f.text_field :colour %>
@@ -33,5 +32,11 @@
   <div class="field">
   <%= f.label :price %><br>
   <%= f.text_field :price %>
-</div>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </div>
 <% end %>
+</div>
