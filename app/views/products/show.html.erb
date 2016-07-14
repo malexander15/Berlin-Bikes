@@ -26,11 +26,13 @@
 
       <h4>
         Price: 
-      </h4
+      </h4>
       
         <p>
           <strong><%= @product.price %></strong>
         </p>
+        
+        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
   </div>
 </div>
 
