@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 <div class="formstyle">
-=======
->>>>>>> authentication
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -15,7 +12,6 @@
     </div>
   <% end %>
 
-<<<<<<< HEAD
   <div class="form-group">
     <%= f.label :first_name, class: "control-label" %><br>
     <%= f.text_field :first_name, class: "form-control" %>
@@ -29,17 +25,4 @@
   </div>
 <% end %>
 </div>
-=======
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
->>>>>>> authentication
+  

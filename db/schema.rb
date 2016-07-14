@@ -13,6 +13,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160708014027) do
 =======
 ActiveRecord::Schema.define(version: 20160706011212) do
@@ -20,6 +21,9 @@ ActiveRecord::Schema.define(version: 20160706011212) do
 =======
 ActiveRecord::Schema.define(version: 20160713233558) do
 >>>>>>> comments
+=======
+ActiveRecord::Schema.define(version: 20160706011212) do
+>>>>>>> authentication
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,8 +85,11 @@ ActiveRecord::Schema.define(version: 20160713233558) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   add_foreign_key "comments", "products"
   add_foreign_key "comments", "users"
+=======
+>>>>>>> authentication
 =======
 >>>>>>> authentication
 end
