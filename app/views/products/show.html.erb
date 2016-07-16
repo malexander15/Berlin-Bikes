@@ -1,20 +1,44 @@
 <div id="content">
-	<h4 class="title"><%= @product.name %></h4>
-	<p class="description"><%= @product.description %></p>
+  <div class="container-fluid">
+	  <div class="row">
+		  <div class="col-md-12 col-xs-12">
+	      <h1 class="title"><%= @product.name %></h4>
+	
+	      <div class="image"><%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %></div>
+	
+	    </div>
+	  </div>
+	</div>
+	
+  <div class="container-fluid">
+	  <div class="row">
+		  <div class="col-md-12 col-xs-12">
+		    
+		    <h3>Description</h3>
+	      <p class="description"><%= @product.description %></p>
+	
+	      <h3>Price</h3>
+	      <p class="price">$<%= @product.price %></p>
 
-	<strong>Price</strong>
-	<p class="price">$<%= @product.price %></p>
-
-	<strong>Colour</strong>
-	<p class="colour"><%= @product.colour %></p>
-
-	<div class="image"><%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %></div>
-</div>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to "Delete Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
+	      <h3>Colour</h3>
+	      <p class="colour"><%= @product.colour %></p>
+	      
+	     </div>
+	  </div>
+	</div>
 
 <%= render 'new_comment' %>
 <%= render 'comments' %>
 
 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+      </div>
+	  </div>
+	</div>
+
+</div>
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to "Delete Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
+
+
+
+
