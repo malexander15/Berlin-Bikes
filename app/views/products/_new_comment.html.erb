@@ -1,4 +1,5 @@
 <% if signed_in? %>
+<<<<<<< HEAD
  
       <h4>Add a review:</h4>
   <%= form_for([@product, @product.comments.build]) do |f| %>
@@ -16,3 +17,26 @@
    
   <% end %>
 <% end %>
+=======
+<div class="container-fluid" id="prod-show">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+      <h4>Add a review:</h4>
+  			<%= form_for([@product, @product.comments.build]) do |f| %>
+		      <p>
+		      <%= f.label :body, "Comments" %><br>
+		      <%= f.text_area :body %>
+		    </p>
+		    <p>
+
+		    <div class="rating"></div>
+		    </p>
+		    <p>
+		      <%= f.submit "Submit", class: "btn btn-primary" %>
+		    </p>
+			<% end %>
+    </div>
+  </div>
+</div>
+<% end %>
+>>>>>>> ae1f32802969175642f475d7f9245115540a7986

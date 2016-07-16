@@ -1,43 +1,20 @@
-<p id="notice"><%= notice %></p>
-<div class="container-fluid" id="prod-show">
-	<div class="row">
-		<div class="col-md-12 col-xs-12">
-		  
-		   <h3><%= @product.name %></h3>
-      
-		  <p class><%= image_tag(@product.image_url) %></p>
-	  </div>
-	  
-	    <h4>
-        Description: 
-      </h4>
-      
-        <p>
-          <strong><%= @product.description %></strong>
-        </p>
-      
-      <h4>
-         Color: 
-      </h4>
-    
-         <p>
-           <strong><%= @product.colour %></strong>
-         </p>
+<div id="content">
+	<h4 class="title"><%= @product.name %></h4>
+	<p class="description"><%= @product.description %></p>
 
-      <h4>
-        Price: 
-      </h4>
-      
-        <p>
-          <strong><%= @product.price %></strong>
-        </p>
-        
-        
-        
-        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-  </div>
+	<strong>Price</strong>
+	<p class="price">$<%= @product.price %></p>
+
+	<strong>Colour</strong>
+	<p class="colour"><%= @product.colour %></p>
+
+	<div class="image"><%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %></div>
 </div>
 
-
 <%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to "Delete Product", product_path(@product), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<%= render 'new_comment' %>
+<%= render 'comments' %>
+
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
