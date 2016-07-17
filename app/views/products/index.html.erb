@@ -10,6 +10,7 @@
         <p><%= product.description %></p>
         <strong>$<%= product.price %></strong><br />
       <br>
+      <%= link_to 'New Product', new_product_path %>
       <%= link_to 'Show', product %>
       <%= link_to 'Edit', edit_product_path(product) %>
       <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -17,3 +18,4 @@
     <% end %>
     
     <%= will_paginate @posts %>
+    
