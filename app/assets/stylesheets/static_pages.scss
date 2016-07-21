@@ -17,7 +17,7 @@ h1{
   
 }
 
-footer.container-fluid{
+footer.container{
 	background-color: #000;
 	padding-top: 20px;
   position: absolute;
@@ -54,6 +54,23 @@ font-size: 1.5em;
 .carousel-caption{
   padding-top: 0px;
   color: red;
+}
+
+.formstyle{
+    padding-top: 50px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group, .actions{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notice, .alert{
+  padding-top: 100px;
 }
 
 .land-pic{

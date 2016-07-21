@@ -1,31 +1,22 @@
-#notice{
-    padding: 50px;
+#content {
+	padding: .4em 0;
+	margin: 70px auto;
+	text-align: center;
+	width: 50%;
+
 }
 
-.field{
-    font-family: 'Oswald', Helvetica, sans-serif;
-    color: red;
-    margin-left: auto;
-    margin-right: auto;
+.title {
+	text-align: center;
+	font-family: 'Oswald', Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    padding-top: 50px;
+    text-shadow: 2px 3px grey;
 }
 
-.fstyle{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 
 h3{
-    font-family: 'Oswald', Helvetica, sans-serif;
-    text-align: center;
+	font-family: 'Oswald', Helvetica, sans-serif;
 }
 
-h4{
-    font-family: 'Oswald', Helvetica, sans-serif;
-    padding-bottom: 10px;
-}
-
-#prod-show{
-    width:50%;
-}
