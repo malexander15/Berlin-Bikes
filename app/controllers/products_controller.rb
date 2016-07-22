@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     search_term = params[:q]
     @products = Product.where("name LIKE ?", "%#{search_term}%")
   else
-    @products = Product.all.paginate(:page => params[:page], :per_page => 2)
+    @products = Product.all.paginate(:page => params[:page], :per_page => 12)
 
     end
   end
