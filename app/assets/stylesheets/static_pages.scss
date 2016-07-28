@@ -34,6 +34,11 @@ footer.container{
 	float: right;
 }
 
+#srch-color{
+  color: white;
+}
+
+
 .navbar{
   -webkit-box-shadow: 0 8px 6px -6px black;
 	-moz-box-shadow: 0 8px 6px -6px black;
@@ -51,9 +56,21 @@ font-size: 1.5em;
 	text-transform: uppercase;
 }
 
-.carousel-caption{
-  padding-top: 0px;
-  color: red;
+.log-style{
+  padding-top: 5px;
+}
+
+.carousel-indicators li{
+  padding-top: 15px;
+  background-color: #0000ff;
+}
+
+.carousel-indicators .active {
+    background-color: red;
+}
+
+#prod-name{
+  padding-bottom: 30px;
 }
 
 .formstyle{
