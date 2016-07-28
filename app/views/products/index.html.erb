@@ -4,7 +4,7 @@
   <div class="row">
   
     <% @products.each do |product| %>
-      <div class="col-md-3 product-images">
+      <div class="col-md-4 product-images">
     <%= image_tag(product.image_url, class: "img-responsive") %>
       <h3 class="product-name"><%= product.name %></h3>
         <p><%= product.description %></p>
@@ -17,5 +17,5 @@
     </div><!-- /col -->
     <% end %>
     
-    <%= will_paginate @products %>
+    
     
