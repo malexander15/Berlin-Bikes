@@ -1,40 +1,30 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :products do
+    resources :comments
+  end
+  resources :users
 
- devise_for :users
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "registrations" }
 
- resources :products do
-   resources :comments
- end
-
- resources :users
-
+  resources :orders, only: [:index, :show, :create, :destroy]
+  post 'payments/create'
 
   get 'static_pages/about'
 
   get 'static_pages/contact'
-
-  get 'static/pages'
-
-  get 'static/about'
-
-  get 'static/contact'
+  post 'static_pages/thank_you'
 
   get 'static_pages/index'
-
-  get 'static_pages/landing_page'
-
-  post 'static_pages/thank_you'
-  
-  resources :orders, only: [:index, :show, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-    root 'static_pages#landing_page'
+  root 'static_pages#landing_page'
 
+  mount ActionCable.server => '/cable'
 
-    mount ActionCable.server => '/cable'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
