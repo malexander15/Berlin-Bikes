@@ -6,3 +6,4 @@
   data-description="<%= @product.description %>"
   data-image="<%= @product.image_url %>">
 </script>
+<%= hidden_field_tag(:product_id, @product.id) %>

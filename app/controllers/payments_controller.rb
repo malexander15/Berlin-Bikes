@@ -14,7 +14,8 @@ def create
 		)
 
 		if charge.paid
-			Order.create!(product_id: @product.id, user_id: @user.id, total: @product.price)
+			Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
+			UserMailer.purchase(@user).deliver_now
 		end
 
 		flash[:success] = "Payment processed successfully"
@@ -24,7 +25,7 @@ def create
 		err  = body[:error]
 		flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
 	end
-	redirect_to product_path(@product)
+	redirect_to payments_create_path(@product)
 end
 
 end

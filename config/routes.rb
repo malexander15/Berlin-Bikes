@@ -5,8 +5,12 @@ Rails.application.routes.draw do
  resources :products do
    resources :comments
  end
-
+ resources :orders, only: [:index, :show, :create, :destroy]
  resources :users
+ 
+ resources :payments
+
+  post 'payments/create'
 
 
   get 'static_pages/about'
