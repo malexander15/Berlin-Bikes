@@ -6,5 +6,10 @@ class Comment < ActiveRecord::Base
   validates :user, presence: true
   validates :product, presence: true
   validates :rating, numericality: { only_integer: true }
-  
+
+
+	#TODO
+	# Practice a simple method with built in Ruby methods: write a simple custom before save method to validate the length of the comment body
+
+
 end

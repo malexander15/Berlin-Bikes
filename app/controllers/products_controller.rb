@@ -1,7 +1,17 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+	# TODO 1:
+	# Add another before filter here for the new, create, edit, update, and destroy actions
+  # Make sure that the user is logged in and/or logged in AND admin (you can just redirect_to root_url otherwise
+	# Remember how the RESTful actions work- the new method in the controller just refers to the product creation view, 
+	# But create is the action for sending that request to the server
 
-  # GET /products
+	# TODO 2:
+	# Go into the individual views and place if statements around the links to each action
+	# E.G. Think about it, why would you have a link to the show action which would only redirect a non admin user?
+
+
+	# GET /products
   # GET /products.json
   def index
     if params[:q]

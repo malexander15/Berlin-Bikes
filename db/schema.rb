@@ -26,11 +26,6 @@ ActiveRecord::Schema.define(version: 20160724163310) do
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
-  create_table "controllers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.integer "product_id"

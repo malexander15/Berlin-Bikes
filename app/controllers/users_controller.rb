@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, :except => [:show, :index]
+  #TODO
+	# I would suggest changing this, theres no reason to show all the users to anyone authenticated.
+	# If you do want to have the view there, make sure to add an appropriate before filter to the RESTFUl
+	# actions for users, and also be sure to put appropriate if statements around links in the views.
+	before_filter :authenticate_user!, :except => [:show, :index]
   load_and_authorize_resource
 
 
