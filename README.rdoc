@@ -1,19 +1,9 @@
-== README
-
-This app will be for my careerfoundry course on rails.
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+Berlin Bikes was developed while a student in CareerFoundry's Web Development course.
+  Features included:
+  
+  -User Authentication(Sign in/Out) with Devise gem
+  -User Abilities with CanCan gem
+  -Basic unit/functional testing with Rspec and Factory Girl
+  -Users can comment/review each product
+  -Products can be rated with star rating using "Raty", a jquery star rating plugin
+  -Users can order products with demo purchasing via the stripe api  
